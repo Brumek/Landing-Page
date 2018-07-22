@@ -92,8 +92,7 @@ nav.black ul {
     transform: translateY(-10px);
 }
 
-.nav-link a:hover::after,
-.nav-link a:focus::after {
+.nav-link a:hover::after {
     height: 3px;
     opacity: 1;
     -webkit-transform: translateY(0px);

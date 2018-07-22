@@ -166,6 +166,8 @@
                 $("nav ul").toggleClass("showing");
             });
         });
+
+        // Hide menu after click
         
         $(document).ready(function() {
             $(".nav-link").on("click", function() {
@@ -173,7 +175,7 @@
             });
         });
 
-        // Scrolling Effect
+        // Navbar black on scroll
 
         $(window).on("scroll", function() {
             if ($(window).scrollTop()) {
@@ -182,6 +184,17 @@
                 $('nav').removeClass('black');
             }
         })
+        
+         // Smoth scrolling to anchor
+        
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+       
     </script>
 
 </body>
