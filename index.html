@@ -26,7 +26,7 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li class="nav-link"><a href="#header" class="scroll">Home</a></li>
+                    <li class="nav-link"><a href="#header">Home</a></li>
                     <li class="nav-link"><a href="#about-section" class="scroll">About</a></li>
                     <li class="nav-link"><a href="#deals-section" class="scroll">Deals</a></li>
                     <li class="nav-link"><a href="#contact-section" class="scroll">Contact</a></li>
@@ -38,7 +38,7 @@
             </p>
         </div>
         <div>
-            <a href="#about-section" class="scroll"><input type="button" id="header-button" value="Learn more"></a>
+            <a href="#about-section"><input type="button" id="header-button" value="Learn more"></a>
         </div>
     </header>
     <main>
@@ -163,6 +163,12 @@
 
         $(document).ready(function() {
             $("#menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+        
+        $(document).ready(function() {
+            $(".nav-link").on("click", function() {
                 $("nav ul").toggleClass("showing");
             });
         });

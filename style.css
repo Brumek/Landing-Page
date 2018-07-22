@@ -151,10 +151,10 @@ nav.black ul {
     display: block;
     margin: 4em auto;
     max-width: 85vw;
-    line-height: 40px;
+    line-height: 1.5;
     text-align: center;
     color: #353439;
-    padding-top: 50px;
+    padding: 50px 0;
 }
 
 #about-description,
@@ -200,7 +200,7 @@ nav.black ul {
     margin: 4em auto;
     padding: 4em 0;
     max-width: 1100px;
-    line-height: 40px;
+    line-height: 1.5;
     color: #353439;
 }
 
@@ -276,6 +276,7 @@ nav.black ul {
 
 #contact-wrapper {
     display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
@@ -293,7 +294,7 @@ nav.black ul {
 
 #newsletter {
     max-width: 200px;
-    margin-right: 60px;
+    margin-right: 150px;
 }
 
 #newsletter-button {
@@ -351,6 +352,7 @@ footer p {
     margin-right: auto;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center
 }
 
 @media(max-width: 580px) {
@@ -394,11 +396,20 @@ footer p {
 
     #contact-wrapper {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
+    #newsletter {
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    #newsletter-button {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
-
-
 
 @media(max-width: 1024px) {
     #video-section {
@@ -415,5 +426,11 @@ footer p {
 
     #footer-content {
         max-width: 85vw;
+    }
+}
+
+@media(max-height: 500px) {
+    #header-button {
+        display: none;
     }
 }
